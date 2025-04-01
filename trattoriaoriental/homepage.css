@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    background: rgb(red, green, blue);
+    justify-content: center;
+}
+
+.container{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 600px 300px 400px;
+    gap: 10px;
+}
+
+.navbar{
+    display: grid;
+    grid-column: 1/5;
+    grid-row: 3/5;
+    column-gap: 20px;
+}
+
+nav ul a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #a8534b;
+}
+
+.menu-item{
+    margin: 15px;
+    font-weight: bold;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 3/5;
+}
