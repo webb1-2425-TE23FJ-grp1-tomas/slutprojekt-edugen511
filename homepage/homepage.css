@@ -2,25 +2,29 @@
   box-sizing: border-box;
 }
 
-:root{
+body{
+  width: 1200px;
+  background-color:burlywood;
+}
+
+:root {
   font-size: 16px;
 }
 
 .container {
   display: grid;
   grid-template-areas:
-    "1"
-    "2"
-    "3"
-    "4"
-    "5";
+    "header"
+    "map"
+    "description"
+    "contact";
   gap: 10px;
 }
 
 @media only screen and (max-width: 1200px) {
-  #logo{
+  #logo {
     max-width: 1200px;
-    max-height:fit-content;
+    max-height: fit-content;
   }
 }
 
@@ -28,9 +32,9 @@
   body {
     background-color: aqua;
   }
-  #logo{
+  #logo {
     max-width: 600px;
-    max-height:fit-content;
+    max-height: fit-content;
   }
 }
 
@@ -38,35 +42,49 @@
   body {
     background-color: red;
   }
-  #logo{
+  #logo {
     max-width: 300px;
-    max-height:100px;
+    max-height: 100px;
   }
 }
 
-.navmenu{
-display: grid;
-grid-template-columns: 1fr;
-grid-template-areas:
-"logo"
-"nav";
+.navmenu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "logo nav";
 }
 
-#logo{
+#logo {
   grid-area: logo;
   display: grid;
-  justify-content: center;
+  justify-content: start;
+  margin-left: 20px;
 }
 
-#navigation{
+#navigation ul{
   grid-area: nav;
-  display: grid;
-  justify-content: center;
+  display: flex;
+  justify-content: end;
+  margin-top: 65px;
+  margin-right: 20px;
+  gap: 10px;
 }
 
-#navtext{
-  font-size: 25px;
+#navtext {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: Birthstone;
+  font-size: 46px;
   color: #a8534b;
   text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+a:hover {
+  color: rgb(39, 89, 250);
+  text-decoration: underline;
 }
