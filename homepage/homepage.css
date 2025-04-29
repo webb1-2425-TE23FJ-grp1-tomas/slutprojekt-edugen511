@@ -2,9 +2,9 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   width: 2600px;
-  background-color:burlywood;
+  background-color: burlywood;
 }
 
 :root {
@@ -59,16 +59,18 @@ body{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "logo nav";
+  color: azure;
 }
 
 #logo {
   grid-area: logo;
   display: grid;
   justify-content: start;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-#navigation ul{
+#navigation ul {
   grid-area: nav;
   display: flex;
   align-items: end;
@@ -92,7 +94,13 @@ a {
   font-weight: bold;
 }
 
-a:hover {
+#a:hover {
   color: rgb(39, 89, 250);
   text-decoration: underline;
+}
+
+#map {
+  border: 20px;
+  border-radius: 20px;
+  border-width: 10px;
 }
