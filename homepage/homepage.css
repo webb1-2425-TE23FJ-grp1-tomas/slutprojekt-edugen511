@@ -3,8 +3,9 @@
 }
 
 body {
-  width: 2600px;
+  width: auto;
   background-color: burlywood;
+  margin: 0;
 }
 
 :root {
@@ -19,11 +20,12 @@ body {
     "description"
     "contact";
   gap: 10px;
+  max-width: 100%;
 }
 
-@media only screen and (max-width: 2600px) {
+@media only screen and (max-width: 1920px) {
   #logo {
-    max-width: 2600px;
+    max-width: 1920px;
     max-height: fit-content;
   }
 }
@@ -33,15 +35,33 @@ body {
     max-width: 1200px;
     max-height: fit-content;
   }
+
+  #navigation ul {
+    margin-right: 10px;
+    gap: 20px;
+  }
+
+  a {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   body {
     background-color: aqua;
   }
+  #navigation ul {
+    margin-right: 5px;
+    gap: 10px;
+  }
+
+  a {
+    font-size: 24px;
+  }
+
   #logo {
-    max-width: 600px;
-    max-height: fit-content;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -53,21 +73,32 @@ body {
     max-width: 300px;
     max-height: 100px;
   }
+  a {
+    font-size: 18px;
+  }
 }
 
 .navmenu {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "logo nav";
-  color: azure;
+  background-color: white;
+  color: black;
+  padding: 10px 0;
 }
 
 #logo {
   grid-area: logo;
-  display: grid;
+  display: flex;
+  align-items: center;
   justify-content: start;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
 }
 
 #navigation ul {
@@ -94,9 +125,22 @@ a {
   font-weight: bold;
 }
 
-#a:hover {
+a:hover {
   color: rgb(39, 89, 250);
   text-decoration: underline;
+}
+
+#toggleHeaderBtn {
+  padding: 10px 20px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#toggleHeaderBtn:hover {
+  background-color: #ccc;
 }
 
 #map {
