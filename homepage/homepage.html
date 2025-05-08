@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial scale=1.0" />
     <link rel="stylesheet" type="text/css" href="homepage.css" />
+    <script defer src="homepage.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
       </style>
@@ -21,33 +22,39 @@
     <source media="(min-width:300px)" srcset="../img/trattorialogo300.webp">
     <img src="../img/trattorialogo.webp" alt="trattorialogo1200">
   </div>
-  <nav id="navigation">
-    <ul>
-      <li id="navtext"><a href="#">Home<a></li>
-      <li id="navtext"><a href="menu.html">Menu<a></li>
-      <li id="navtext"><a href="book.html">Booking<a></li>
-      <li id="navtext"><a href="aboutus.html">About Us<a></li>
+  <nav class="navigation">
+    <ul class="navtext">
+      <li><a href="#">Home<a></li>
+      <li><a href="menu.html">Menu<a></li>
+      <li><a href="book.html">Booking<a></li>
+      <li><a href="aboutus.html">About Us<a></li>
     </ul>
   </nav>
 </header>
 <button id="toggleHeaderBtn">Toggle Header</button>
 
 <div class="mapinfo">
-<h1>HITTA TILL OSS!</h1>
-<!-- <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2124.1709330678054!2d15.671473163753351!3d58.41738513767669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46596ecb7b3aa2a3%3A0x9a6f79b9e6efd586!2sJason%E2%80%99s%20Matstugan!5e1!3m2!1ssv!2sse!4v1745913415782!5m2!1ssv!2sse" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+<h1>Find Us!</h1>
+<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2124.1709330678054!2d15.671473163753351!3d58.41738513767669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46596ecb7b3aa2a3%3A0x9a6f79b9e6efd586!2sJason%E2%80%99s%20Matstugan!5e1!3m2!1ssv!2sse!4v1745913415782!5m2!1ssv!2sse" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
 <div class="events">
-<card class="easter">
-
+<card id="info">
+<h1>Our Thing?</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </card>
 
-<card class="valborg">
-
+<card id="easter">
+<h1>Easter Special</h1>
 </card>
 
-<card class="firstofmay">
+<card id="valborg">
+  <h1>Valborg? Hell yeah!</h1>
+  <h2>40% off on beer!</h2>
+</card>
 
+<card id="nationalday">
+  <h1>National Day</h1>
 </card>
 
 </div>

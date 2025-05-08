@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     toggleButton.addEventListener('click', function() {
       if (header.style.display === 'none') {
-        header.style.display = 'grid'; // Or 'flex' depending on your header's display
+        header.style.display = 'grid';
         toggleButton.textContent = 'Hide Header';
       } else {
         header.style.display = 'none';
