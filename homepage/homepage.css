@@ -44,12 +44,17 @@ body {
   a {
     font-size: 30px;
   }
+
+  #info{
+    max-width: fit-content;
+  }
+
+  .card{
+    margin: 20px 0px 0px 20px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: aqua;
-  }
   #navigation ul {
     margin-right: 5px;
     gap: 10px;
@@ -66,9 +71,6 @@ body {
 }
 
 @media only screen and (max-width: 300px) {
-  body {
-    background-color: red;
-  }
   #logo {
     max-width: 300px;
     max-height: 100px;
@@ -147,8 +149,12 @@ a {
 }
 
 .mapinfo {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 0px;
+}
+
+h1, .mapinfo {
+  margin: 10px 0px;
 }
 
 #map {
@@ -159,11 +165,15 @@ a {
 }
 
 .events {
+  max-width: 2600px;
   display: grid;
   grid-template: events;
   grid-template-areas:
     "info info info"
     "easter valborg nationalday";
+  gap: 10px;
+  justify-items: center;
+  align-items: start;
 }
 
 .events h1 {
@@ -185,12 +195,34 @@ a {
 
 #easter {
   grid-area: easter;
+  background-color: white;
+  margin-top: 40px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  min-width: 400px;
+  justify-content: center;
 }
 
 #valborg {
   grid-area: valborg;
+  background-color: white;
+  margin-top: 40px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  min-width: 450px;
+  justify-content: center;
+}
+
+h2, #valborg{
+  font-size: 40px;
 }
 
 #nationalday {
   grid-area: nationalday;
+  background-color: white;
+  margin-top: 40px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  min-width: 400px;
+  align-items: center;
 }
