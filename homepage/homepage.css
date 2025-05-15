@@ -2,14 +2,21 @@
   box-sizing: border-box;
 }
 
-body {
-  width: auto;
-  background-color: burlywood;
-  margin: 0;
+* img {
+  border-radius: 10px;
 }
 
 :root {
   font-size: 16px;
+  --bg: #d6bfa1;
+  --txtclr: #a8534b;
+  --contactclr: #61523f;
+}
+
+body {
+  width: auto;
+  background-color: var(--bg);
+  margin: 0;
 }
 
 .container {
@@ -45,11 +52,11 @@ body {
     font-size: 30px;
   }
 
-  #info{
+  #info {
     max-width: fit-content;
   }
 
-  .card{
+  .card {
     margin: 20px 0px 0px 20px;
   }
 }
@@ -71,16 +78,82 @@ body {
 }
 
 @media only screen and (max-width: 300px) {
-  #logo {
-    max-width: 300px;
-    max-height: 100px;
+  #navigation ul {
+    margin-right: 5px;
+    gap: 10px;
   }
+
   a {
-    font-size: 18px;
+    font-size: 24px;
+  }
+
+  #logo {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .events card {
+    width: 95%;
+    max-width: 250px;
+    margin: 0;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #info {
+    margin-left: 0;
+    margin-right: 0;
+    width: 95%;
+    max-width: 300px;
+  }
+
+  .events img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .events h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .events h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .events p {
+    font-size: 1rem;
+  }
+
+  #easter,
+  #valborg,
+  #nationalday {
+    min-width: unset;
+  }
+
+  #easter h1,
+  #easter h2,
+  #valborg h1,
+  #valborg h2,
+  #nationalday h1,
+  #nationalday h2 {
+    text-align: center;
   }
 }
 
 .navmenu {
+  max-width: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "logo nav";
@@ -121,7 +194,7 @@ a {
   text-decoration: none;
   font-family: Birthstone;
   font-size: 46px;
-  color: #a8534b;
+  color: var(--txtclr);
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
@@ -153,7 +226,7 @@ a {
   margin-bottom: 0px;
 }
 
-h1, .mapinfo {
+.mapinfo, h1 {
   margin: 10px 0px;
 }
 
@@ -171,7 +244,7 @@ h1, .mapinfo {
   grid-template-areas:
     "info info info"
     "easter valborg nationalday";
-  gap: 10px;
+  gap: 0px;
   justify-items: center;
   align-items: start;
 }
@@ -186,8 +259,8 @@ h1, .mapinfo {
 
 #info {
   grid-area: info;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 150px;
+  margin-right: 150px;
   padding: 10px 20px;
   background-color: white;
   border-radius: 30px;
@@ -199,7 +272,7 @@ h1, .mapinfo {
   margin-top: 40px;
   padding: 5px 10px;
   border-radius: 20px;
-  min-width: 400px;
+  min-width: 600px;
   justify-content: center;
 }
 
@@ -209,11 +282,12 @@ h1, .mapinfo {
   margin-top: 40px;
   padding: 5px 10px;
   border-radius: 20px;
-  min-width: 450px;
+  min-width: 650px;
   justify-content: center;
 }
 
-h2, #valborg{
+h2,
+#valborg {
   font-size: 40px;
 }
 
@@ -223,6 +297,10 @@ h2, #valborg{
   margin-top: 40px;
   padding: 5px 10px;
   border-radius: 20px;
-  min-width: 400px;
+  min-width: 600px;
   align-items: center;
+}
+
+.contact {
+  background-color: var(--contactclr);
 }
