@@ -8,8 +8,9 @@
 
 :root {
   font-size: 16px;
-  --bg: #d6bfa1;
-  --txtclr: #a8534b;
+  --bg: #f1dec5;
+  --txtclr: #a5433a;
+  --contacttxt: #ffffff;
   --contactclr: #61523f;
 }
 
@@ -92,9 +93,21 @@ body {
     margin-right: 10px;
   }
 
+  .mapinfo{
+    justify-content: center;
+  }
+
+  #map {
+    max-width: 300px;
+  }
+
   .events {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template: 
+    "info"
+    "easter"
+    "valborg"
+    "nationalday";
     align-items: center;
     gap: 20px;
     padding: 0 10px;
@@ -105,10 +118,12 @@ body {
     max-width: 250px;
     margin: 0;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   }
 
   #info {
+    display: grid;
+    grid-area: info;
     margin-left: 0;
     margin-right: 0;
     width: 95%;
@@ -136,20 +151,20 @@ body {
     font-size: 1rem;
   }
 
-  #easter,
-  #valborg,
-  #nationalday {
-    min-width: unset;
-  }
+#easter{
+  display: grid;
+  grid-area: easter;
+}
 
-  #easter h1,
-  #easter h2,
-  #valborg h1,
-  #valborg h2,
-  #nationalday h1,
-  #nationalday h2 {
-    text-align: center;
-  }
+#valborg{
+  display: grid;
+  grid-area: valborg;
+}
+
+#nationalday{
+  display: grid;
+  grid-area: nationalday;
+}
 }
 
 .navmenu {
@@ -247,10 +262,15 @@ a {
   gap: 0px;
   justify-items: center;
   align-items: start;
+  margin-bottom: 30px;
 }
 
-.events h1 {
+.events h2 {
   font-size: 60px;
+}
+
+.events h3 {
+  font-size: 45px;
 }
 
 .events p {
@@ -302,5 +322,26 @@ h2,
 }
 
 .contact {
+  grid-area: contact;
   background-color: var(--contactclr);
+  display: grid;
+  grid-template:
+  "h1"
+  "number space space socials"
+  "text1 text2 text3 privacypolicy";
+  text-align: start;
+}
+
+.contact h2{
+  color: var(--contacttxt);
+  font-size: 50px;
+  margin: 10px 0;
+  margin-left: 30px;
+}
+
+.contact p{
+  color: var(--contacttxt);
+  font-size: 25px;
+  margin: 5px 0;
+  margin-left: 50px;
 }
