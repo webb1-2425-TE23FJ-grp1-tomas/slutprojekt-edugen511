@@ -15,7 +15,6 @@
 }
 
 body {
-  width: auto;
   background-color: var(--bg);
   margin: 0;
 }
@@ -28,147 +27,14 @@ body {
     "events"
     "contact";
   gap: 10px;
+}
+
+body, .container {
   max-width: 100%;
 }
 
-@media only screen and (max-width: 1920px) {
-  #logo {
-    max-width: 1920px;
-    max-height: fit-content;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  #logo {
-    max-width: 1200px;
-    max-height: fit-content;
-  }
-
-  #navigation ul {
-    margin-right: 10px;
-    gap: 20px;
-  }
-
-  a {
-    font-size: 30px;
-  }
-
-  #info {
-    max-width: fit-content;
-  }
-
-  .card {
-    margin: 20px 0px 0px 20px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #navigation ul {
-    margin-right: 5px;
-    gap: 10px;
-  }
-
-  a {
-    font-size: 24px;
-  }
-
-  #logo {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  #navigation ul {
-    margin-right: 5px;
-    gap: 10px;
-  }
-
-  a {
-    font-size: 24px;
-  }
-
-  #logo {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .mapinfo{
-    justify-content: center;
-  }
-
-  #map {
-    max-width: 300px;
-  }
-
-  .events {
-    display: grid;
-    grid-template: 
-    "info"
-    "easter"
-    "valborg"
-    "nationalday";
-    align-items: center;
-    gap: 20px;
-    padding: 0 10px;
-  }
-
-  .events card {
-    width: 95%;
-    max-width: 250px;
-    margin: 0;
-    padding: 15px;
-
-  }
-
-  #info {
-    display: grid;
-    grid-area: info;
-    margin-left: 0;
-    margin-right: 0;
-    width: 95%;
-    max-width: 300px;
-  }
-
-  .events img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 10px;
-  }
-
-  .events h1 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .events h2 {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .events p {
-    font-size: 1rem;
-  }
-
-#easter{
-  display: grid;
-  grid-area: easter;
-}
-
-#valborg{
-  display: grid;
-  grid-area: valborg;
-}
-
-#nationalday{
-  display: grid;
-  grid-area: nationalday;
-}
-}
-
 .navmenu {
-  max-width: auto;
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "logo nav";
@@ -194,11 +60,11 @@ body {
 .navigation ul {
   grid-area: nav;
   display: flex;
-  align-items: end;
-  justify-content: end;
+  align-items: flex-end;
+  justify-content: flex-end;
   margin-top: 65px;
   margin-right: 100px;
-  gap: 50px;
+  gap: 40px;
 }
 
 .navtext {
@@ -222,7 +88,7 @@ a {
 
 #toggleHeaderBtn {
   display: flex;
-  flex: start;
+  flex: flex-start;
   padding: 10px 20px;
   background-color: white;
   border: none;
@@ -236,26 +102,19 @@ a {
   background-color: #d3d3d39d;
 }
 
-.mapinfo {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 .mapinfo, h1 {
   margin: 10px 0px;
 }
 
-#map {
-  margin-top: 0px;
-  border: 20px;
-  border-radius: 20px;
-  border-width: 10px;
+gmp-map {
+  height: 100%;
+  width: auto;
 }
 
 .events {
-  max-width: 2600px;
+  width: 100%;
   display: grid;
-  grid-template: events;
+  grid-area: events;
   grid-template-areas:
     "info info info"
     "easter valborg nationalday";
@@ -279,11 +138,16 @@ a {
 
 #info {
   grid-area: info;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin: 0 auto;
   padding: 10px 20px;
+  max-width: 90%;
   background-color: white;
   border-radius: 30px;
+}
+
+#easter, #valborg, #nationalday {
+  width: 100%;
+  max-width: 600px;
 }
 
 #easter {
@@ -292,7 +156,6 @@ a {
   margin-top: 40px;
   padding: 5px 10px;
   border-radius: 20px;
-  min-width: 600px;
   justify-content: center;
 }
 
@@ -302,7 +165,6 @@ a {
   margin-top: 40px;
   padding: 5px 10px;
   border-radius: 20px;
-  min-width: 650px;
   justify-content: center;
 }
 
@@ -317,18 +179,14 @@ h2,
   margin-top: 40px;
   padding: 5px 10px;
   border-radius: 20px;
-  min-width: 600px;
   align-items: center;
 }
 
 .contact {
   grid-area: contact;
   background-color: var(--contactclr);
-  display: grid;
-  grid-template:
-  "h1"
-  "number space space socials"
-  "text1 text2 text3 privacypolicy";
+  display: flexbox;
+  flex-direction: row;
   text-align: start;
 }
 

@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../homepage/homepage.css" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../homepage/homepage.css"/>
     <script defer src="../homepage/homepage.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
       </style>
@@ -24,7 +26,7 @@
   </div>
   <nav class="navigation">
     <ul class="navtext">
-      <li><a href="#">Home<a></li>
+      <li><a href="#">Home</a></li>
       <li><a href="menu.html">Menu<a></li>
       <li><a href="book.html">Booking<a></li>
       <li><a href="aboutus.html">About Us<a></li>
@@ -35,32 +37,34 @@
 
 <div class="mapinfo">
 <h1>Find Us!</h1>
-<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2124.1709330678054!2d15.671473163753351!3d58.41738513767669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46596ecb7b3aa2a3%3A0x9a6f79b9e6efd586!2sJason%E2%80%99s%20Matstugan!5e1!3m2!1ssv!2sse!4v1745913415782!5m2!1ssv!2sse" width="2000" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ <gmp-map center="58.417640686035156,15.67210578918457" zoom="14" map-id="findus">
+    <gmp-advanced-marker position="58.417640686035156,15.67210578918457" title="My location"></gmp-advanced-marker>
+  </gmp-map>
 </div>
 
 <div class="events">
-<card id="info">
+<div class="card" id="info">
 <h2>Our Thing?</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</card>
+</div>
 
-<card id="easter">
+<div class="card" id="easter">
 <h2>Easter Special</h2>
 <h3>Something Important</h3>
 <img id="easterimage" src="../img/easter500.webp" alt="easterimage">
-</card>
+</div>
 
-<card id="valborg">
+<div class="card" id="valborg">
   <h2>Valborg? Hell yeah!</h2>
   <h3>40% off on beer!</h3>
   <img id="valborgimage" src="../img/valborg500.webp" alt="valborgimage">
-</card>
+</div>
 
-<card id="nationalday">
+<div class="card" id="nationalday">
   <h2>National Day</h2>
   <h3>Happy National Day, Sweden!</h3>
   <img id="nationaldayimage" src="../img/nationalday500.webp" alt="nationaldayimage">
-</card>
+</div>
 
 </div>
 
