@@ -101,12 +101,7 @@ body {
 }
 
 .navtext li a:hover {
-  color: rgb(39, 89, 250);
-  text-decoration: underline;
-}
-
-#toggleHeaderBtn:hover {
-  background-color: #d3d3d39d;
+  color: black;
 }
 
 .contact {
