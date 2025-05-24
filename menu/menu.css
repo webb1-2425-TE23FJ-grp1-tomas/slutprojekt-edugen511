@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+* img {
+  border-radius: 10px;
+}
+
+:root {
+  font-size: 16px;
+  --bg: #f1dec5;
+  --txtclr: #a5433a;
+  --contacttxt: #ffffff;
+  --contactclr: #61523f;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "dishes"
+    "salads"
+    "drinks"
+    "contact";
+  gap: 10px;
+  text-align: center;
+  color: var(--txtclr);
+}
+
+body,
+.container {
+  max-width: 100%;
+}
+
+#hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--txtclr);
+}
+
+body {
+  background-color: var(--bg);
+  margin: 0;
+}
+
+.navmenu {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "logo nav";
+  background-color: white;
+  color: black;
+  padding: 10px 0;
+}
+
+#logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navigation ul {
+  grid-area: nav;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 65px;
+  margin-right: 100px;
+}
+
+.navtext {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.navtext.show {
+  display: flex;
+}
+
+.navtext a {
+  text-decoration: none;
+  font-size: 40px;
+  color: var(--txtclr);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.navtext li a:hover {
+  color: rgb(39, 89, 250);
+  text-decoration: underline;
+}
+
+#toggleHeaderBtn:hover {
+  background-color: #d3d3d39d;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: var(--contactclr);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 30px;
+  text-align: flex-start;
+  gap: 10px;
+}
+
+.contact h2 {
+  font-size: 50px;
+}
+
+.contact p {
+  font-size: 25px;
+}
+
+.contact h2,
+.contact p {
+  color: var(--contacttxt);
+}

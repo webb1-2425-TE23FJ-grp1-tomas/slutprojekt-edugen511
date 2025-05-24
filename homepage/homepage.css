@@ -27,6 +27,8 @@ body {
     "events"
     "contact";
   gap: 10px;
+  text-align: center;
+  color: var(--txtclr);
 }
 
 body,
@@ -35,7 +37,7 @@ body,
 }
 
 #hamburger {
-  display: none; /* Hidden by default on larger screens */
+  display: none;
   font-size: 2rem;
   background: none;
   border: none;
@@ -56,8 +58,20 @@ body,
 }
 
 @media (max-width: 400px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "map"
+      "events"
+      "contact";
+    gap: 10px;
+    text-align: center;
+    color: var(--txtclr);
+  }
+
   #hamburger {
-    display: block; /* Show hamburger on small screens */
+    display: block;
     font-size: 75px;
     background: none;
     border: none;
@@ -70,15 +84,15 @@ body,
   }
 
   .navtext {
-    display: none; /* Hide navigation items by default on small screens */
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    gap: 0; /* Remove gap for stacked items */
+    display: none;
+  }
+
+  .navtext a {
+    display: none;
   }
 
   .navtext.show {
-    display: flex !important; /* Show navigation items when 'show' class is added */
+    display: flex !important;
   }
 
   #logo img {
@@ -88,7 +102,7 @@ body,
   }
 
   .navmenu {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
@@ -99,10 +113,33 @@ body,
   }
 
   .events {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 5px;
+    display: grid;
+    grid-area: events;
+    grid-template-columns:
+      "info"
+      "easter"
+      "valborg"
+      "nationalday";
+  }
+
+  #info {
+    display: grid;
+    grid-column: info;
+  }
+
+  #easter {
+    display: grid;
+    grid-column: easter;
+  }
+
+  #valborg {
+    display: grid;
+    grid-column: valborg;
+  }
+
+  #nationalday {
+    display: grid;
+    grid-column: nationalday;
   }
 
   .card img {
@@ -156,29 +193,28 @@ body,
 
 .navigation ul {
   grid-area: nav;
-  display: flex; /* Keep this to align .navtext */
+  display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   margin-top: 65px;
-  margin-right: 100px; /* This margin might still be useful for the overall nav ul placement */
+  margin-right: 100px;
 }
 
 .navtext {
   list-style-type: none;
-  display: flex; /* Changed to flex for default visibility on larger screens */
-  gap: 40px; /* Apply gap here for spacing between list items */
-  padding: 0; /* Remove default ul padding */
-  margin: 0; /* Remove default ul margin */
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 .navtext.show {
   display: flex;
 }
 
-a {
+.navtext a {
   text-decoration: none;
-  font-family: Birthstone;
-  font-size: 46px;
+  font-size: 40px;
   color: var(--txtclr);
   text-transform: uppercase;
   text-align: center;
@@ -194,21 +230,24 @@ a {
   background-color: #d3d3d39d;
 }
 
-.mapinfo{
+.mapinfo {
+  margin-left: 100px;
   background-color: white;
   border-radius: 20px;
   padding: 10px;
+  width: 90%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .mapinfo,
 h1 {
   margin: 10px 0px;
-  font-size: 70px;
+  font-size: 35px;
 }
 
-.mapinfo, p{
-  font-size: 30px;
+.mapinfo,
+p {
+  font-size: 25px;
 }
 
 .events {
@@ -252,9 +291,7 @@ h1 {
   border-radius: 30px;
 }
 
-#easter,
-#valborg,
-#nationalday {
+#easter #valborg #nationalday {
   width: 100%;
   max-width: 600px;
 }
@@ -277,8 +314,7 @@ h1 {
   justify-content: center;
 }
 
-h2,
-#valborg { /* This 'h2, #valborg' selector is a bit odd. If you want #valborg to have a specific font size, target it directly */
+h2 #valborg {
   font-size: 40px;
 }
 
@@ -294,21 +330,23 @@ h2,
 .contact {
   grid-area: contact;
   background-color: var(--contactclr);
-  display: flexbox; /* Should be 'display: flex;' or 'display: block;' depending on desired layout */
-  flex-direction: row;
-  text-align: start;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 30px;
+  text-align: flex-start;
+  gap: 10px;
 }
 
 .contact h2 {
-  color: var(--contacttxt);
   font-size: 50px;
-  margin: 10px 0;
-  margin-left: 30px;
 }
 
 .contact p {
-  color: var(--contacttxt);
   font-size: 25px;
-  margin: 5px 0;
-  margin-left: 50px;
+}
+
+.contact h2,
+.contact p {
+  color: var(--contacttxt);
 }
