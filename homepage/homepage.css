@@ -110,18 +110,20 @@ header {
   margin: 0 auto;
   padding: 10px 20px;
   border-radius: 20px;
-  width: 100%;
+  width: 95%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.mapinfo,
-h1 {
+.mapinfo h1 {
   margin: 10px 0px;
   font-size: 55px;
 }
 
-.mapinfo,
-p {
+.mapinfo p {
   font-size: 25px;
 }
 
@@ -131,13 +133,12 @@ p {
   margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -152,18 +153,16 @@ p {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -174,7 +173,6 @@ p {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -183,7 +181,6 @@ p {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -195,19 +192,23 @@ p {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .events {
@@ -249,7 +250,7 @@ p {
   grid-row: 1;
   margin: 0 auto;
   padding: 10px 20px;
-  max-width: 900%;
+  max-width: 95%;
   background-color: white;
   border-radius: 30px;
 }
@@ -300,36 +301,28 @@ h2 #valborg {
   flex-direction: column;
   text-align: left;
   padding-left: 30px;
-  text-align: flex-start;
+  text-align: start;
   gap: 10px;
 }
 
 .contact h2 {
   font-size: 50px;
+  margin: 15px;
 }
 
-.contact p {
+.contact p,
+.contact a {
   font-size: 25px;
+  margin: 10px;
 }
 
 .contact h2,
-.contact p {
+.contact p,
+.contact a {
   color: var(--contacttxt);
 }
 
-@media (max-width: 1200px) {
-  .navmenu {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navigation ul {
-    justify-content: center;
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .container {
     display: grid;
     grid-template-areas:
@@ -414,6 +407,7 @@ h2 #valborg {
     width: 100%;
     text-align: center;
   }
+
   .show {
     display: flex;
     flex-direction: column;
@@ -431,6 +425,25 @@ h2 #valborg {
     padding: 5px 0;
   }
 
+  .mapinfo h1 {
+    font-size: 1.3rem;
+  }
+
+  .mapinfo p {
+    font-size: 1rem;
+  }
+
+  #slideimg1 {
+    content: url("../img/shopoutside.webp");
+  }
+
+  #slideimg2 {
+    content: url("../img/shopinside.webp");
+  }
+  #slideimg3 {
+    content: url("../img/foodtoexpect.webp");
+  }
+
   .events {
     grid-area: events;
     grid-template-columns: 1fr;
@@ -444,11 +457,31 @@ h2 #valborg {
     grid-row: unset;
   }
 
+  #info h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+
+  #info p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
   #easter {
     display: grid;
     grid-column: 1 / -1;
     grid-row: unset;
     margin-top: 0;
+  }
+
+  #easter h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+
+  #easter h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
   }
 
   #valborg {
@@ -458,11 +491,31 @@ h2 #valborg {
     margin-top: 0;
   }
 
+  #valborg h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+
+  #valborg h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
   #nationalday {
     display: grid;
     grid-column: 1 / -1;
     grid-row: unset;
     margin-top: 0;
+  }
+
+  #nationalday h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+
+  #nationalday h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
   }
 
   .card img {
@@ -474,18 +527,15 @@ h2 #valborg {
     text-align: start;
   }
 
-  a {
-    font-size: 1.2rem;
-  }
-
-  .events h2,
-  .events h3,
   .contact h2 {
     font-size: 1.5rem;
+    margin: 15px;
   }
 
   .events p,
-  .contact p {
+  .contact p,
+  .contact a {
     font-size: 0.9rem;
+    margin: 10px;
   }
 }

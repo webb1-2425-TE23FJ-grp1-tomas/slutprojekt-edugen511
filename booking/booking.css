@@ -23,17 +23,14 @@ body {
   display: grid;
   grid-template-areas:
     "header"
-    "dishes"
-    "salads"
-    "drinks"
+    "img"
     "contact";
   gap: 10px;
   text-align: center;
   color: var(--txtclr);
 }
 
-body,
-.container {
+body .container {
   max-width: 100%;
 }
 
@@ -106,53 +103,19 @@ header {
   color: black;
 }
 
-#bigtxt1 {
-  font-size: 2.1rem;
-}
-
-#bigtx2 {
-  font-size: 2.1rem;
-}
-
-#bigtxt3 {
-  font-size: 2.1rem;
-}
-
-.card {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.image-wrapper {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  justify-items: center;
 }
 
-.card img {
-  display: block;
-  margin: 0 auto;
+.image-wrapper img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
-}
-
-.card div {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  width: 100%;
-  max-width: 300px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  color: var(--txtclr);
-  margin: 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact {
@@ -163,7 +126,7 @@ header {
   text-align: left;
   padding-left: 30px;
   text-align: start;
-  gap: 10px;
+  gap: 5px;
 }
 
 .contact h2 {
@@ -184,6 +147,12 @@ header {
 }
 
 @media (max-width: 600px) {
+  #bobthebuilder {
+    content: url(../img/bobthebuilderphone.webp);
+    max-width: 300px;
+    height: auto;
+  }
+
   header {
     position: sticky;
     top: 0;
@@ -274,13 +243,13 @@ header {
 
   .contact h2 {
     font-size: 1.5rem;
-    margin: 5px;
+    margin: 15px;
   }
 
   .events p,
   .contact p,
   .contact a {
     font-size: 0.9rem;
-    margin: 0;
+    margin: 10px;
   }
 }

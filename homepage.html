@@ -3,111 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial scale=1.0"/>
-    <link rel="stylesheet" type="text/css" href="../homepage/homepage.css"/>
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../homepage/homepage.css" />
     <script defer src="../homepage/homepage.js"></script>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
     </style>
     <title>Trattoria Oriental</title>
   </head>
+
   <body>
     <div class="container">
-      
-<!-- HEADER FÖR HEMSIDA, SKA TA TVÅ GRID SPANN -->
-<header class="navmenu">
-  <div id="logo">
-    <a href="homepage.html">
-    <img src="../img/trattorialogo.webp" alt="trattorialogo1200">
-    </a>
-  </div>
-  <button id="hamburger" aria-label="Toggle menu">☰</button>
-  <nav class="navigation">
-    <ul class="navtext">
-      <li><a href="menu.html">Menu<a></li>
-      <li><a href="book.html">Booking<a></li>
-      <li><a href="aboutus.html">About Us<a></li>
-    </ul>
-  </nav>
-</header>
+      <!-- HEADER FÖR HEMSIDA, SKA TA TVÅ GRID SPANN -->
+      <header class="navmenu">
+        <div id="logo">
+          <a href="homepage.html">
+            <img src="../img/trattorialogo.webp" alt="trattorialogo1200" />
+          </a>
+        </div>
+        <button id="hamburger" aria-label="Toggle menu">☰</button>
+        <nav class="navigation">
+          <ul class="navtext">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="book.html">Booking</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </nav>
+      </header>
 
-<!-- SKULLE INNEHÅLLA KARTA, IMPORT FUNKAR EJ OCH FÖLJER INTE GOOD PRACTICE, KÖR LIGHTBOX ISTÄLLET -->
-<div class="mapinfo">
-<h1>Find Us!</h1>
-<p>So sorry, map no no work right now. Here are some pictures on what the restaurant looks like.</p>
-<div class="slideshow-container">
+      <!-- SKULLE INNEHÅLLA KARTA, IMPORT FUNKAR EJ OCH FÖLJER INTE GOOD PRACTICE, KÖR LIGHTBOX ISTÄLLET -->
+      <div class="mapinfo">
+        <h1>Find Us!</h1>
+        <p>
+          So sorry, map no no work right now. Here are some pictures on what the
+          restaurant looks like.
+        </p>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img
+              src="../img/shopoutsidedesktop.webp"
+              alt="Outside"
+              style="width: 100%"
+              id="slideimg1"
+            />
+            <div class="text">Outside</div>
+          </div>
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="../img/shopoutside.webp" style="width:100%">
-    <div class="text">Outside</div>
-  </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img
+              src="../img/shopinsidedesktop.webp"
+              alt="Inside"
+              style="width: 100%"
+              id="slideimg2"
+            />
+            <div class="text">Inside</div>
+          </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="../img/shopinside.webp" style="width:100%">
-    <div class="text">Inside</div>
-  </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img
+              src="../img/foodtoexpectdesktop.webp"
+              alt="Foods"
+              style="width: 100%"
+              id="slideimg3"
+            />
+            <div class="text">The Food</div>
+          </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="../img/foodtoexpect.webp" style="width:100%">
-    <div class="text">The Food</div>
-  </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
 
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-</div>
+      <!-- LITE KUL INFO OM RABATTER OSV -->
+      <div class="events">
+        <div class="card" id="info">
+          <h2>Our Thing?</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
 
-<!-- LITE KUL INFO OM RABATTER OSV -->
-<div class="events">
-<div class="card" id="info">
-<h2>Our Thing?</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+        <div class="card" id="easter">
+          <h2>Easter Special</h2>
+          <h3>Oh yeah!</h3>
+          <img id="easterimage" src="../img/easter500.webp" alt="easterimage" />
+        </div>
 
-<div class="card" id="easter">
-<h2>Easter Special</h2>
-<h3>Something Important</h3>
-<img id="easterimage" src="../img/easter500.webp" alt="easterimage">
-</div>
+        <div class="card" id="valborg">
+          <h2>Valborg? Hell yeah!</h2>
+          <h3>40% off on beer!</h3>
+          <img
+            id="valborgimage"
+            src="../img/valborg500.webp"
+            alt="valborgimage"
+          />
+        </div>
 
-<div class="card" id="valborg">
-  <h2>Valborg? Hell yeah!</h2>
-  <h3>40% off on beer!</h3>
-  <img id="valborgimage" src="../img/valborg500.webp" alt="valborgimage">
-</div>
+        <div class="card" id="nationalday">
+          <h2>National Day</h2>
+          <h3>Happy National Day!</h3>
+          <img
+            id="nationaldayimage"
+            src="../img/nationalday500.webp"
+            alt="nationaldayimage"
+          />
+        </div>
+      </div>
+    </div>
 
-<div class="card" id="nationalday">
-  <h2>National Day</h2>
-  <h3>Happy National Day!</h3>
-  <img id="nationaldayimage" src="../img/nationalday500.webp" alt="nationaldayimage">
-</div>
-
-</div>
-
-<!-- KONTAKT INFO! -->
-<div class="contact">
-<h2>Contact Us</h2>
-<p>exemplaryemail@gmail.com</p>
-<p>+46 073 420-69 69</p>
-<a href="#">PRIVACY POLICY</a>
-<p>TRATTORIA ORIENTAL, 2025</p>
-</div>
-
-</div>
+    <!-- KONTAKT INFO! -->
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <p>exemplaryemail@gmail.com</p>
+      <p>+46 073 420-69 69</p>
+      <a href="#">PRIVACY POLICY</a>
+      <p>TRATTORIA ORIENTAL, 2025</p>
+    </div>
   </body>
 </html>

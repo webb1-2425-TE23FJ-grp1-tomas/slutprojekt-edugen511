@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+
+* img {
+  border-radius: 10px;
+}
+
+:root {
+  font-size: 16px;
+  --bg: #f1dec5;
+  --txtclr: #a5433a;
+  --contacttxt: #ffffff;
+  --contactclr: #61523f;
+}
+
+body {
+  background-color: var(--bg);
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "walloftext"
+    "contact";
+  gap: 10px;
+  text-align: center;
+  color: var(--txtclr);
+}
+
+body,
+.container {
+  max-width: 100%;
+}
+
+#hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--txtclr);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navmenu {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "logo nav";
+  background-color: white;
+  color: black;
+  padding: 10px 0;
+}
+
+#logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navigation ul {
+  grid-area: nav;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 65px;
+  margin-right: 100px;
+}
+
+.navtext {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.navtext a {
+  text-decoration: none;
+  font-size: 40px;
+  color: var(--txtclr);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.navtext li a:hover {
+  color: black;
+}
+
+.walloftext {
+  grid-area: walloftext;
+  background-color: white;
+  color: var(--txtclr);
+  padding: 40px 20px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.walloftext h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.walloftext p {
+  text-align: left;
+  font-size: 20px;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: var(--contactclr);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 30px;
+  text-align: start;
+  gap: 5px;
+}
+
+.contact h2 {
+  font-size: 50px;
+  margin: 15px;
+}
+
+.contact p,
+.contact a {
+  font-size: 25px;
+  margin: 10px;
+}
+
+.contact h2,
+.contact p,
+.contact a {
+  color: var(--contacttxt);
+}
+
+@media (max-width: 600px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .navmenu {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "logo hamburger";
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    grid-template-rows: auto auto;
+  }
+
+  #logo {
+    grid-area: logo;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  #logo img {
+    content: url("../img/pizzaicon.webp");
+    max-width: 100px;
+    height: auto;
+  }
+
+  #hamburger {
+    grid-area: hamburger;
+    display: block;
+    justify-self: end;
+    font-size: 40px;
+  }
+
+  .navigation {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .navtext {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+
+  .navtext.show {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+  .navtext a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--txtclr);
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navtext li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact {
+    text-align: start;
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
+    margin: 15px;
+  }
+
+  .events p,
+  .contact p,
+  .contact a {
+    font-size: 0.9rem;
+    margin: 10px;
+  }
+}

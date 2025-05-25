@@ -4,9 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial scale=1.0" />
-    <title>WORK IN PROGRESS</title>
+    <link rel="stylesheet" type="text/css" href="../booking/booking.css" />
+    <script defer src="../booking/booking.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+    </style>
+    <title>Trattoria Oriental - Menu</title>
   </head>
+
   <body>
-    <h1>THIS DOESN'T EXIST YET LOL</h1>
+    <div class="container">
+      <header class="navmenu">
+        <div id="logo">
+          <a href="homepage.html">
+            <img src="../img/trattorialogo.webp" alt="trattorialogo1200" />
+          </a>
+        </div>
+        <button id="hamburger" aria-label="Toggle menu">☰</button>
+        <nav class="navigation">
+          <ul class="navtext">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="image-wrapper">
+        <img src="../img/bobthebuilder.webp" alt="WIP" id="bobthebuilder" />
+      </div>
+
+      <!-- KONTAKT INFO! -->
+      <div class="contact">
+        <h2>Contact Us</h2>
+        <p>exemplaryemail@gmail.com</p>
+        <p>+46 073 420-69 69</p>
+        <a href="#">PRIVACY POLICY</a>
+        <p>TRATTORIA ORIENTAL, 2025</p>
+      </div>
+    </div>
   </body>
 </html>
